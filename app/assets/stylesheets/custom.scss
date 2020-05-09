@@ -1,0 +1,43 @@
+$bg-color-primary: #fff;
+$bg-color-secondary: #222;
+$color-primary: #222;
+$color-secondary: #fff;
+
+body {
+  margin: 0;
+}
+header {
+  background-color: $bg-color-secondary;
+  color: $color-secondary;
+  padding: 1em;
+  padding-bottom: 0;
+}
+#logo {
+  font-size: 2em;
+}
+header a,
+nav {
+  color: currentColor;
+  text-decoration: none;
+  display: inline-block;
+}
+nav ul {
+  padding: 0;
+}
+nav li {
+  display: inline-block;
+  margin-left: 1em;
+}
+main {
+  min-height: 90vh;
+  max-width: 90vw;
+  margin: auto;
+}
+footer {
+  background-color: $bg-color-secondary;
+  color: $color-secondary;
+  padding: 1em;
+}
+footer a {
+  color: currentColor;
+}
