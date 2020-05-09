@@ -2,6 +2,8 @@ $bg-color-primary: #fff;
 $bg-color-secondary: #222;
 $color-primary: #222;
 $color-secondary: #fff;
+$btn-font-color: #fff;
+$btn-bg-color: blue;
 
 body {
   margin: 0;
@@ -40,4 +42,19 @@ footer {
 }
 footer a {
   color: currentColor;
+}
+
+/*
+ *
+ *  COMPONENTS
+ *
+ */
+
+.btn {
+  display: inline-block;
+  color: $btn-font-color;
+  background-color: $btn-bg-color;
+  padding: 1em;
+  border-radius: 5px;
+  text-decoration: none;
 }
