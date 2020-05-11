@@ -14,6 +14,7 @@
     <%= render 'layouts/header' %>
     <main>
       <%= yield %>
+      <%= debug(params) if Rails.env.development? %>
     </main>
     <%= render 'layouts/footer' %>
   </body>

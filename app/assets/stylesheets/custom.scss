@@ -5,6 +5,12 @@ $color-secondary: #fff;
 $btn-font-color: #fff;
 $btn-bg-color: blue;
 
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 body {
   margin: 0;
 }
@@ -16,6 +22,9 @@ header {
 }
 #logo {
   font-size: 2em;
+}
+#title {
+  text-align: center;
 }
 header a,
 nav {
@@ -57,4 +66,47 @@ footer a {
   padding: 1em;
   border-radius: 5px;
   text-decoration: none;
+}
+
+/*
+ *
+ *  FORMS
+ *
+ */
+
+#signup-form {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+input[type=submit]:hover {
+  cursor: pointer;
+}
+
+/*
+ *
+ *  DEBUG
+ *
+ */
+
+.debug_dump {
+  clear: both;
+  width: 100%;
+  margin: 1em auto;
+  padding: 5px;
+  border: solid 1px #222;
+  border-radius: 5px;
+  @include box_sizing;
 }
