@@ -4,6 +4,9 @@ $color-primary: #222;
 $color-secondary: #fff;
 $btn-font-color: #fff;
 $btn-bg-color: blue;
+$alert-bg-color-danger: #fcc;
+$alert-bg-color-success: #cf9;
+$state-danger-text: red;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -26,6 +29,25 @@ header {
 #title {
   text-align: center;
 }
+.alert {
+  width: 100%;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 1em 0;
+  @include box_sizing;
+}
+.alert-danger {
+  background-color: $alert-bg-color-danger;
+}
+.alert-success {
+  background-color: $alert-bg-color-success;
+}
+/*
+ *
+ * NAV
+ *
+ */
+
 header a,
 nav {
   color: currentColor;
@@ -39,11 +61,25 @@ nav li {
   display: inline-block;
   margin-left: 1em;
 }
+
+/*
+ *
+ * MAIN CONTENT
+ *
+ */
+
 main {
   min-height: 90vh;
   max-width: 90vw;
   margin: auto;
 }
+
+/*
+ *
+ * FOOTER
+ *
+ */
+
 footer {
   background-color: $bg-color-secondary;
   color: $color-secondary;
@@ -93,6 +129,22 @@ input {
 
 input[type=submit]:hover {
   cursor: pointer;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  color: $state-danger-text;
+  .form-control {
+    color: $state-danger-text;
+    border-color: $state-danger-text;
+  }
 }
 
 /*
