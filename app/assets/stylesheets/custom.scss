@@ -32,7 +32,7 @@ header {
 .alert {
   width: 100%;
   border-radius: 3px;
-  padding: 5px;
+  padding: 1em;
   margin: 1em 0;
   @include box_sizing;
 }
@@ -110,7 +110,8 @@ footer a {
  *
  */
 
-#signup-form {
+#signup-form-container,
+#login-form-container {
   width: 100%;
   max-width: 500px;
   margin: auto;
