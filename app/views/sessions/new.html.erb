@@ -1,7 +1,7 @@
 <% provide(:title, "Log in") %>
 <h1 id="title">Log in</h1>
 
-<div id="login-form-container">
+<div id="form-container">
   <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
 
     <%= f.label :email %>
