@@ -6,6 +6,7 @@ $btn-font-color: #fff;
 $btn-bg-color: blue;
 $alert-bg-color-danger: #fcc;
 $alert-bg-color-success: #cf9;
+$alert-bg-color-warning: #ffdb99;
 $state-danger-text: red;
 
 @mixin box_sizing {
@@ -41,6 +42,9 @@ header {
 }
 .alert-success {
   background-color: $alert-bg-color-success;
+}
+.alert-warning {
+  background-color: $alert-bg-color-warning;
 }
 /*
  *
