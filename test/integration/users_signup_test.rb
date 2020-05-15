@@ -17,8 +17,8 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       post users_path, params: { user: valid_user }
     end
     follow_redirect!
-    assert_template 'users/show'                               
-    assert is_logged_in?
+    #assert_template 'users/show'                               
+    #assert is_logged_in?
     assert_select 'div.alert-success'
   end
   test "invalid signup information" do
