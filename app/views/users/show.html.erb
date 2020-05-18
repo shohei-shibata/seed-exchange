@@ -3,3 +3,13 @@
   <%= gravatar_for @user %>
   <%= @user.name %>
 </h1>
+
+<div id="plants">
+  <% if @user.plants.any? %>
+    <h3>Plants (<%= @user.plants.count %>)</h3>
+    <ol>
+      <%= render @plants %> 
+    </ol>
+    <%= will_paginate @plants %>
+  <% end %>
+</div>

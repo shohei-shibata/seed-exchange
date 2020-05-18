@@ -19,3 +19,11 @@ User.create!(name:  "Example User",
                activated: true,
                activated_at: Time.zone.now)
 end
+
+# Generate plants for a subset of users
+users = User.order(:created_at).take(6)
+50.times do
+  name = Faker::Food.vegetables 
+  name_latin = Faker::Lorem.sentence(word_count: 3).delete_suffix('.') 
+  users.each { |user| user.plants.create!(name: name, name_latin: name_latin) }
+end
