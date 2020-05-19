@@ -1,11 +1,16 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  name: MyString
-  name_latin: MyString
-  user: one
+  name: Blue-Stemmed Goldenrod
+  name_latin: Solidago caesia
+  user: michael
 
 two:
-  name: MyString
-  name_latin: MyString
-  user: two
+  name: New England Aster
+  name_latin: Symphyotrichum novae-angliae
+  user: michael
+
+<% 30.times do |n| %>
+plant_<%= n %>:
+  name: <%= Faker::Food.vegetables %>
+  name_latin: <%= Faker::Lorem.sentence(word_count: 3).delete_suffix('.') %> 
+  user: michael
+<% end %>
