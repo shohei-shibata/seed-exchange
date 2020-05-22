@@ -1,0 +1,11 @@
+<%= form_with(model: @plant, local: true) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :name, placeholder: "Common Name" %>
+  </div>  
+  <div class="field">
+    <%= f.text_area :name_latin, placeholder: "Latin Name" %>
+  </div>
+
+  <%= f.submit "Add plant", class: "btn" %>
+<% end %>

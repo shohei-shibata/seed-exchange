@@ -1,7 +1,7 @@
 <body>
-  <h1>Seed Exchange</h1>
-
-  <p>A web app to help communities share seeds and plants for free</p>
-  
-  <%= link_to "Sign up now!", signup_path, class: "btn" %>
+  <% if logged_in? %>
+    <%= render 'home_logged_in' %>
+  <% else %>
+    <%= render 'home_logged_out' %>
+  <% end %>
 </body>
