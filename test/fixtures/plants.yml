@@ -6,7 +6,7 @@ one:
 two:
   name: New England Aster
   name_latin: Symphyotrichum novae-angliae
-  user: michael
+  user: archer
 
 <% 30.times do |n| %>
 plant_<%= n %>:

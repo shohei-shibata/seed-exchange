@@ -19,4 +19,13 @@ class PlantsControllerTest < ActionDispatch::IntegrationTest
     end
     assert_redirected_to login_url
   end
+
+  test "should redirect destroy for wrong plant" do
+    log_in_as(users(:michael))
+    @plant = plants(:two)
+    assert_no_difference 'Plant.count' do
+      delete plant_path(@plant)
+    end
+    assert_redirected_to root_url
+  end
 end
